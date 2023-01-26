@@ -16,6 +16,8 @@ def main():
     print(other_list)
     my_list[2] = 45
     print(other_list)
+    squared_list = [x * x for x in range(1, 11) if x % 2 != 0]  # example of list comprehension with selection criteria
+    print(squared_list)
 
     # Sets and dictionaries are unordered collections.
     # Sets are a collection of zero or more immutable data objects. Sets do not allow duplicates.
