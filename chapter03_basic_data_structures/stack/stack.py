@@ -30,4 +30,6 @@ class Stack:
         return len(self.items)
 
     def __str__(self):
+        """Print the items in the stack."""
+
         print(*self.items)
