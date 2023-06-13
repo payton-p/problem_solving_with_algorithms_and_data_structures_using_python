@@ -1,4 +1,4 @@
-from chapter03_basic_data_structures.stacks.stack import Stack
+from chapter03_basic_data_structures.stack.stack import Stack
 
 
 # The Divide by 2 algorithm assumes that we start with an integer greater than 0. A simple iteration then continually

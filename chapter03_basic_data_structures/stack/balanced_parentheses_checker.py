@@ -1,4 +1,4 @@
-from chapter03_basic_data_structures.stacks.stack import Stack
+from chapter03_basic_data_structures.stack.stack import Stack
 
 
 def balanced_parentheses_checker(symbol_string):
