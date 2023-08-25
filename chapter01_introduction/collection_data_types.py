@@ -1,7 +1,7 @@
 def main():
     # Built-in collection data types.
 
-    # Lists, strings, and types are ordered collections.
+    # Lists, strings, and tuples are ordered collections.
     list_example = [2, 5, 2, 8, True, "hey"]  # lists are mutable
     print(list_example)
     string_example = "Hey"  # strings are immutable
@@ -19,8 +19,8 @@ def main():
     squared_list = [x * x for x in range(1, 11) if x % 2 != 0]  # example of list comprehension with selection criteria
     print(squared_list)
 
-    # Sets and dictionaries are unordered collections.
-    # Sets are a collection of zero or more immutable data objects. Sets do not allow duplicates.
+    # Sets and dictionaries are unordered collections. Sets are a collection of zero or more immutable data objects.
+    # Sets do not allow duplicates.
     set_example1 = {3, 5, "dog", True}
     set_example2 = {2, 3, 1}
     print(set_example1)
