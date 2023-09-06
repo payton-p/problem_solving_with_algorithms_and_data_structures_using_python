@@ -1,7 +1,7 @@
 # Sequential search (aka linear search): starting at the first item in the list, we move from item to item, following
 # the underlying sequential ordering until we either find what we are looking for or run out of items.
 
-# Sequential search of an unordered list. Time is O(n).
+# Sequential search of an unordered list. Time is O(n) for ordered and unordered lists.
 def sequential_search_of_unordered_list(unordered_list, item):
     position = 0
     found = False
