@@ -1,7 +1,6 @@
 # The selection sort improves on the bubble sort by making only one exchange for every pass through the list. In order
 # to do this, a selection sort looks for the largest value as it makes a pass and, after completing the pass, places it
 # in the proper location. Selection sort is O(n^2).
-
 def selection_sort(unordered_list):
     for fill_slot in range(len(unordered_list) - 1, 0, -1):
         position_of_max = 0

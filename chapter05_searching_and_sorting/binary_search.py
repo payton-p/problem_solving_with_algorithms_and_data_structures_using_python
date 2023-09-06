@@ -1,3 +1,4 @@
+# Binary search of an ordered list. Time is O(log(n)).
 def binary_search(ordered_list, item):
     first = 0
     last = len(ordered_list) - 1
@@ -17,7 +18,6 @@ def binary_search(ordered_list, item):
 
 
 def main():
-    # Binary search of an ordered list. Time is O(log(n)).
     ordered_list = [0, 1, 2, 8, 13, 17, 19, 32, 42, ]
     print(binary_search(ordered_list, 3))
     print(binary_search(ordered_list, 13))
