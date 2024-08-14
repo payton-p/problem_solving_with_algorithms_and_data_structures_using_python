@@ -3,7 +3,7 @@
 def insertion_sort(unordered_list):
     for index in range(1, len(unordered_list)):
         current_value = unordered_list[index]
-        
+
         position = index
         while position > 0 and unordered_list[position - 1] > current_value:
             unordered_list[position] = unordered_list[position - 1]

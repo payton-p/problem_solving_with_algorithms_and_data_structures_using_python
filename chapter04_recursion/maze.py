@@ -1,4 +1,5 @@
 import turtle
+
 from chapter04_recursion.maze_constants import DEAD_END, OBSTACLE, PART_OF_PATH, TRIED
 
 

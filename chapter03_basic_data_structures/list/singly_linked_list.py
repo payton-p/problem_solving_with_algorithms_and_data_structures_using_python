@@ -1,6 +1,3 @@
-from chapter03_basic_data_structures.list.node import Node
-
-
 class SinglyLinkedList:
     """
     A linked list is a linear collection of data elements whose order is not determined by the placement in memory.
