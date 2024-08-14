@@ -18,10 +18,9 @@ def get_midpoint(p1, p2):
 
 
 def draw_sierpinski_triangle(points, degree, turtle_cursor):
-    colormap = ['blue', 'red', 'green', 'white', 'yellow',
-                'violet', 'orange']
+    colormap = ["blue", "red", "green", "white", "yellow", "violet", "orange"]
     draw_triangle(points, colormap[degree], turtle_cursor)
-    
+
     if degree > 0:
         draw_sierpinski_triangle([points[0],
                                   get_midpoint(points[0], points[1]),

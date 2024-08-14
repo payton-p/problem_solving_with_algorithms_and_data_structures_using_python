@@ -8,13 +8,13 @@ class Maze:
         rows_in_maze = 0
         columns_in_maze = 0
 
-        maze_file = open(maze_file_name, 'r')
+        maze_file = open(maze_file_name, "r")
         for line in maze_file:
             row_list = []
             col = 0
             for ch in line[:-1]:
                 row_list.append(ch)
-                if ch == 'S':
+                if ch == "S":
                     self.start_row = rows_in_maze
                     self.start_col = col
                 col = col + 1
@@ -28,7 +28,7 @@ class Maze:
         self.x_translate = -columns_in_maze / 2
         self.y_translate = rows_in_maze / 2
 
-        self.turtle = turtle.Turtle(shape='turtle')
+        self.turtle = turtle.Turtle(shape="turtle")
         turtle.setup(width=600, height=600)
         turtle.setworldcoordinates(-(columns_in_maze - 1) / 2 - .5,
                                    -(rows_in_maze - 1) / 2 - .5,
@@ -42,22 +42,24 @@ class Maze:
         for y in range(self.rows_in_maze):
             for x in range(self.columns_in_maze):
                 if self.maze_list[y][x] == OBSTACLE:
-                    self.draw_centered_box(x + self.x_translate,
-                                           -y + self.y_translate,
-                                           'tan')
-        self.turtle.color('black', 'blue')
+                    self.draw_centered_box(x + self.x_translate, -y + self.y_translate, "tan")
+
+        self.turtle.color("black", "blue")
 
     def draw_centered_box(self, x, y, color):
         turtle.tracer(0)
+
         self.turtle.up()
         self.turtle.goto(x - .5, y - .5)
-        self.turtle.color('black', color)
+        self.turtle.color("black", color)
         self.turtle.setheading(90)
         self.turtle.down()
         self.turtle.begin_fill()
+
         for i in range(4):
             self.turtle.forward(1)
             self.turtle.right(90)
+
         self.turtle.end_fill()
         turtle.update()
         turtle.tracer(1)
@@ -78,13 +80,13 @@ class Maze:
         self.move_turtle(col, row)
 
         if val == PART_OF_PATH:
-            color = 'green'
+            color = "green"
         elif val == OBSTACLE:
-            color = 'red'
+            color = "red"
         elif val == TRIED:
-            color = 'black'
+            color = "black"
         elif val == DEAD_END:
-            color = 'red'
+            color = "red"
         else:
             color = None
 

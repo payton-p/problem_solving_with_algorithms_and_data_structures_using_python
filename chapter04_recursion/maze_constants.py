@@ -1,4 +1,4 @@
-PART_OF_PATH = 'O'
-TRIED = '.'
-OBSTACLE = '+'
-DEAD_END = '-'
+PART_OF_PATH = "O"
+TRIED = "."
+OBSTACLE = "+"
+DEAD_END = "-"

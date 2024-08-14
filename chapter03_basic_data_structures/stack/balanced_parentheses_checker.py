@@ -24,8 +24,8 @@ def balanced_parentheses_checker(symbol_string):
 
 
 def main():
-    print(balanced_parentheses_checker('((()))'))
-    print(balanced_parentheses_checker('(()'))
+    print(balanced_parentheses_checker("((()))"))
+    print(balanced_parentheses_checker("(()"))
 
 
 if __name__ == "__main__":

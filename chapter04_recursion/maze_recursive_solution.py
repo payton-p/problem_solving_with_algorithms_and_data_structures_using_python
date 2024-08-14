@@ -34,7 +34,7 @@ def search_from(maze, start_row, start_column):
 
 
 def main():
-    maze = Maze('maze_test.txt')
+    maze = Maze("maze_test.txt")
     maze.draw_maze()
     maze.update_position(maze.start_row, maze.start_col)
 
