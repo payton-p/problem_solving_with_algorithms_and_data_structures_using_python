@@ -22,17 +22,11 @@ def draw_sierpinski_triangle(points, degree, turtle_cursor):
     draw_triangle(points, colormap[degree], turtle_cursor)
 
     if degree > 0:
-        draw_sierpinski_triangle([points[0],
-                                  get_midpoint(points[0], points[1]),
-                                  get_midpoint(points[0], points[2])],
+        draw_sierpinski_triangle([points[0], get_midpoint(points[0], points[1]), get_midpoint(points[0], points[2])],
                                  degree - 1, turtle_cursor)
-        draw_sierpinski_triangle([points[1],
-                                  get_midpoint(points[0], points[1]),
-                                  get_midpoint(points[1], points[2])],
+        draw_sierpinski_triangle([points[1], get_midpoint(points[0], points[1]), get_midpoint(points[1], points[2])],
                                  degree - 1, turtle_cursor)
-        draw_sierpinski_triangle([points[2],
-                                  get_midpoint(points[2], points[1]),
-                                  get_midpoint(points[0], points[2])],
+        draw_sierpinski_triangle([points[2], get_midpoint(points[2], points[1]), get_midpoint(points[0], points[2])],
                                  degree - 1, turtle_cursor)
 
 

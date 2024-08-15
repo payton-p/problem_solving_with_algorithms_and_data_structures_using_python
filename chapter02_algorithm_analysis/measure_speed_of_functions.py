@@ -7,12 +7,16 @@ import timeit
 
 # Append example.
 def append_test(list_example, item):
-    list_example.append(5)
+    list_example.append(item)
+
+    return list_example
 
 
 # Concatenate example.
 def concatenate_test(list_example, another_list):
     list_example = list_example + another_list
+
+    return list_example
 
 
 def main():
