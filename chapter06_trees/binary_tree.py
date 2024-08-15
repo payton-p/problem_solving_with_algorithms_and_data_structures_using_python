@@ -1,7 +1,5 @@
 class BinaryTree:
-    """
-    A binary tree has a maximum of two children for each node.
-    """
+    """A binary tree has a maximum of two children for each node."""
 
     def __init__(self, root_obj):
         self.key = root_obj
