@@ -29,7 +29,7 @@ class BinarySearchTree:
 
         return self.size
 
-    def put(self, key, val):
+    def put(self, key, value):
         """
         Add a new key-value pair to the map.
 
@@ -39,14 +39,14 @@ class BinarySearchTree:
         # Check if the tree already has a root. If it does, add the new key-value pair to the appropriate place in the
         # tree.
         if self.root:
-            self._put(key, val, self.root)
+            self._put(key, value, self.root)
         # If it does not have a root, then create a new tree node and set it as the root of the tree.
         else:
-            self.root = TreeNode(key, val)
+            self.root = TreeNode(key, value)
 
         self.size = self.size + 1
 
-    def _put(self, key, val, current_node):
+    def _put(self, key, value, current_node):
         """This is a helper function that searches the tree and adds a new key-value pair to the map."""
 
         # TODO: duplicate keys are not handled correctly.
@@ -55,22 +55,22 @@ class BinarySearchTree:
         if key < current_node.key:
             # Continue searching.
             if current_node.has_left_child():
-                self._put(key, val, current_node.left_child)
+                self._put(key, value, current_node.left_child)
             # When there is no left child to search, we have found the position in the tree where the new node should
             # be added. When a new child is inserted into the tree, the current node is passed to the new tree node as
             # the parent.
             else:
-                current_node.left_child = TreeNode(key, val, parent=current_node)
+                current_node.left_child = TreeNode(key, value, parent=current_node)
         # If the new key is greater than the current node, search the right subtree.
         else:
             # Continue searching.
             if current_node.has_right_child():
-                self._put(key, val, current_node.right_child)
+                self._put(key, value, current_node.right_child)
             # When there is no right child to search, we have found the position in the tree where the new node should
             # be added. When a new child is inserted into the tree, the current node is passed to the new tree node as
             # the parent.
             else:
-                current_node.right_child = TreeNode(key, val, parent=current_node)
+                current_node.right_child = TreeNode(key, value, parent=current_node)
 
     def __setitem__(self, key, value):
         """
