@@ -49,10 +49,11 @@ class BinarySearchTree:
     def _put(self, key, value, current_node):
         """This is a helper function that searches the tree and adds a new key-value pair to the map."""
 
-        # TODO: duplicate keys are not handled correctly.
-
+        # Handle a duplicate key by updating existing key with new value.
+        if key == current_node.key:
+            current_node.replace_node_data(key, value, current_node.left_child, current_node.right_child)
         # If the new key is less than the current node, search the left subtree.
-        if key < current_node.key:
+        elif key < current_node.key:
             # Continue searching.
             if current_node.has_left_child():
                 self._put(key, value, current_node.left_child)

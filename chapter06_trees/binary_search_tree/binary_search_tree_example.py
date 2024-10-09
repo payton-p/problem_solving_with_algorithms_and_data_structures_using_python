@@ -46,6 +46,14 @@ def main():
     for key in tree:  # uses the __iter__ magic method.
         print(key)
 
+    # Test that duplicate keys are handled correctly.
+    print("Value before duplicate key update:", tree[6])
+    tree[6] = "yellow 2"
+    print("Keys in tree:")
+    for key in tree:
+        print(key)
+    print("Value after duplicate key update:", tree[6])
+
 
 if __name__ == "__main__":
     main()
