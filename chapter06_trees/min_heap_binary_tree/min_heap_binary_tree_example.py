@@ -1,4 +1,4 @@
-from chapter06_trees.min_heap_binary_tree import MinHeapBinaryTree
+from chapter06_trees.min_heap_binary_tree.min_heap_binary_tree import MinHeapBinaryTree
 
 
 def main():
