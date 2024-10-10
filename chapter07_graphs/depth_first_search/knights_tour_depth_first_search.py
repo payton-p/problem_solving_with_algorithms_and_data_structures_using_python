@@ -11,6 +11,9 @@ def knights_tour(current_depth, path, current_explored_vertex, limit):
     one branch of the tree as deeply as possible. In this specific problem, we will forbid a node to be visited more
     than once.
 
+    The knight's tour is a special case of a DFS, where the goal is to create the deepest depth first tree, without any
+    branches.
+
     Parameters breakdown:
     current_depth: current depth of the search tree
     path: list of vertices visited up to this point
