@@ -6,12 +6,13 @@ class TreeNode:
     parent as an attribute of each node.
     """
 
-    def __init__(self, key, val, left=None, right=None, parent=None):
+    def __init__(self, key, val, left=None, right=None, parent=None, *balance_factor):
         self.key = key
         self.payload = val
         self.left_child = left
         self.right_child = right
         self.parent = parent
+        self.balance_factor = 0
 
     def has_left_child(self):
         """Determine whether the current node has a left child."""

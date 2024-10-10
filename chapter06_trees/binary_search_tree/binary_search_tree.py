@@ -29,6 +29,16 @@ class BinarySearchTree:
 
         return self.size
 
+    def get_root_key(self):
+        """Get the root key of the given tree."""
+
+        return self.root.key
+
+    def get_root_value(self):
+        """Get the root value of the given tree."""
+
+        return self.root.payload
+
     def put(self, key, value):
         """
         Add a new key-value pair to the map.
@@ -258,7 +268,7 @@ class BinarySearchTree:
 
     def __iter__(self):
         """
-        Make collection iterable.
+        Make collection iterable. Provide inorder traversal.
 
         Dunder (or magic) methods are double underscored methods that are used to emulate the behavior of built-in
         types. They are predefined methods that simplify many operations that can be performed on a class instance. But,
