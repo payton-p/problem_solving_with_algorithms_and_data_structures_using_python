@@ -12,10 +12,14 @@ class Vertex:
         self.id = key
         self.connected_to = {}  # keeps track of the vertices to which it is connected and the weight of each edge
 
-        # Used in breadth first search.
+        # Used in breadth first search (BFS).
         self.distance = 0
         self.predecessor = None
         self.color = "white"
+
+        # Used in depth first search (DFS).
+        self.discovery_time = 0  # tracks the number of steps in the algorithm before a vertex is first encountered
+        self.finish_time = 0  # tracks the number of steps in the algorithm before a vertex is colored black
 
     def get_id(self):
         """Get the ID of this vertex."""
@@ -75,6 +79,42 @@ class Vertex:
         """
 
         self.color = color
+
+    def get_discovery_time(self):
+        """
+        Get the discovery time of this vertex.
+
+        Used in depth first search (DFS).
+        """
+
+        return self.discovery_time
+
+    def set_discovery_time(self, discovery_time):
+        """
+        Set the discovery time of this vertex.
+
+        Used in depth first search (DFS).
+        """
+
+        self.discovery_time = discovery_time
+
+    def get_finish_time(self):
+        """
+        Get the finish time of this vertex.
+
+        Used in depth first search (DFS).
+        """
+
+        return self.finish_time
+
+    def set_finish_time(self, finish_time):
+        """
+        Set the finish time of this vertex.
+
+        Used in depth first search (DFS).
+        """
+
+        self.finish_time = finish_time
 
     def add_neighbor(self, neighbor, weight=0):
         """Add a connection from this vertex to another."""
