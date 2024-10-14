@@ -1,3 +1,5 @@
+import sys
+
 from chapter06_trees.priority_queue import PriorityQueue
 from chapter07_graphs.graph import Graph
 
@@ -19,6 +21,14 @@ def dijkstras_algorithm(graph, start_node):
 
     # The classic way to implement a priority queue is using a data structure called a binary heap.
     priority_queue = PriorityQueue()
+
+    # Set the default distances. When a vertex is first created distance is set to a very large number. Theoretically,
+    # you would set distance to infinity, but in practice we just set it to a number that is larger than any real
+    # distance we would have in the problem we are trying to solve.
+    for vertex in graph:
+        vertex.set_distance(sys.maxsize)
+        vertex.set_predecessor(None)
+
     start_node.set_distance(0)
     priority_queue.build_heap([(vertex.get_distance(), vertex) for vertex in graph])
 
@@ -66,12 +76,6 @@ def main():
     graph.add_undirected_edge(8, 6, 6)
     graph.add_undirected_edge(2, 5, 4)
     graph.add_undirected_edge(3, 5, 14)
-
-    # Set the default distances. When a vertex is first created distance is set to a very large number. Theoretically,
-    # you would set distance to infinity, but in practice we just set it to a number that is larger than any real
-    # distance we would have in the problem we are trying to solve.
-    for vertex in graph:
-        vertex.set_distance(100000000000)
 
     start_node = graph.get_vertex(0)
     distances = dijkstras_algorithm(graph, start_node)
