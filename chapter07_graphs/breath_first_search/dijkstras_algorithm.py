@@ -32,7 +32,7 @@ def dijkstras_algorithm(graph, start_node):
     start_node.set_distance(0)
     priority_queue.build_heap([(vertex.get_distance(), vertex) for vertex in graph])
 
-    distances = {0: 0}
+    distances = {start_node.get_id(): 0}
 
     while not priority_queue.is_empty():
         current_vertex = priority_queue.delete_min()
