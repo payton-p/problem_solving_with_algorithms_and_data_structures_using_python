@@ -12,7 +12,7 @@ class Vertex:
         self.id = key
         self.connected_to = {}  # keeps track of the vertices to which it is connected and the weight of each edge
 
-        # Used in breadth first search (BFS).
+        # Used in breadth first search (BFS) and Dijkstra's algorithm.
         self.distance = 0
         self.predecessor = None
         self.color = "white"
