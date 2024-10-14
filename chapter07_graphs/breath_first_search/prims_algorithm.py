@@ -75,6 +75,7 @@ def main():
 
     start_node = graph.get_vertex(0)
     distances = prims_algorithm(graph, start_node)
+    print(distances)
 
     # Get the total weight of the minimum spanning tree.
     total_weight = 0
