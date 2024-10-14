@@ -68,6 +68,18 @@ class Graph:
 
         self.vertex_list[from_vertex].add_neighbor(self.vertex_list[to_vertex], weight)
 
+    def add_undirected_edge(self, from_vertex, to_vertex, weight=0):
+        """Add a new, weighted, undirected edge to the graph that connects two vertices."""
+
+        if from_vertex not in self.vertex_list:
+            self.add_vertex(from_vertex)
+
+        if to_vertex not in self.vertex_list:
+            self.add_vertex(to_vertex)
+
+        self.vertex_list[from_vertex].add_neighbor(self.vertex_list[to_vertex], weight)
+        self.vertex_list[to_vertex].add_neighbor(self.vertex_list[from_vertex], weight)
+
     def get_vertices(self):
         """List all vertices in the graph."""
 
