@@ -83,14 +83,14 @@ def main():
     print(graph.get_vertices())
 
     # Add edges.
-    graph.add_edge("A", "B", 0)
-    graph.add_edge("A", "D", 0)
-    graph.add_edge("B", "C", 0)
-    graph.add_edge("B", "D", 0)
-    graph.add_edge("D", "E", 0)
-    graph.add_edge("E", "B", 0)
-    graph.add_edge("E", "F", 0)
-    graph.add_edge("F", "C", 0)
+    graph.add_directed_edge("A", "B", 0)
+    graph.add_directed_edge("A", "D", 0)
+    graph.add_directed_edge("B", "C", 0)
+    graph.add_directed_edge("B", "D", 0)
+    graph.add_directed_edge("D", "E", 0)
+    graph.add_directed_edge("E", "B", 0)
+    graph.add_directed_edge("E", "F", 0)
+    graph.add_directed_edge("F", "C", 0)
 
     for v in graph:
         for w in v.get_connections():

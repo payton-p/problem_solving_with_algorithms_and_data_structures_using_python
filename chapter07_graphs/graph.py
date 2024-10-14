@@ -45,7 +45,7 @@ class Graph:
 
         return key in self.vertex_list
 
-    def add_edge(self, from_vertex, to_vertex, weight=0):
+    def add_directed_edge(self, from_vertex, to_vertex, weight=0):
         """
         Adds a new, weighted, directed edge to the graph that connects two vertices.
 

@@ -21,7 +21,7 @@ def build_knights_tour_problem_graph(board_size):
                 position_node_id = position_to_node_id(position[0], position[1], board_size)
 
                 # All legal moves are converted into edges in the graph.
-                graph.add_edge(node_id, position_node_id)
+                graph.add_directed_edge(node_id, position_node_id)
 
     return graph
 

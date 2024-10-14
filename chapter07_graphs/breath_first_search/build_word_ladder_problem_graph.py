@@ -24,7 +24,7 @@ def build_word_ladder_problem_graph(word_file):
         for word1 in dictionary[bucket]:
             for word2 in dictionary[bucket]:
                 if word1 != word2:
-                    graph.add_edge(word1, word2)
+                    graph.add_directed_edge(word1, word2)
 
     return graph
 
